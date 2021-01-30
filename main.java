@@ -13,6 +13,20 @@ public class main {
              System.out.println("Merge Sort");
         for(int i =0 ; i < Arr.length ; i++){
             System.out.print(" "+Arr[i]);
+            Scanner sc = new Scanner(System.in);
+       int M = sc.nextInt();
+       int n = sc.nextInt();
+       int[][] Array= new int[M][n];
+       for(int i =0 ; i < M ; i++)
+       {
+           for(int j =0 ; j < n ; j++)
+           {
+               Array[i][j]=sc.nextInt();
+           }
+       }
+       SpiralOrder sp = new SpiralOrder();
+       sp.spiral(Array,M,n);
+
         }
     }
 }
