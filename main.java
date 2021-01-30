@@ -13,6 +13,7 @@ public class main {
              System.out.println("Merge Sort");
         for(int i =0 ; i < Arr.length ; i++){
             System.out.print(" "+Arr[i]);
+        }
             Scanner sc = new Scanner(System.in);
        int M = sc.nextInt();
        int n = sc.nextInt();
@@ -27,6 +28,6 @@ public class main {
        SpiralOrder sp = new SpiralOrder();
        sp.spiral(Array,M,n);
 
-        }
+        
     }
 }
