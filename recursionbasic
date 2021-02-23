@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+class re {
+    public : 
+    int inpu( ){
+        int n ; 
+        cin>>n;
+        if(n==42)return -1;
+        else{
+            cout<<n<<"\n";
+            inpu();
+        }
+    }
+};
+int main() {
+    re obj ;
+    obj.inpu();
+	return 0;
+}
