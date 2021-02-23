@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        while(n>0)
+        {
+            String words = sc.next();
+            int len = words.length();
+            if(len>10){
+                int newl =len-2 ;
+             String newl1 = String.valueOf(newl);
+                System.out.println(words.charAt(0)+ newl1 + words.charAt(len-1));
+            }
+            else{
+                System.out.println(words);
+            }
+            n--;
+        }
+    
+    }
+}
