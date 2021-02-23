@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std ; 
+int main(){
+    int a,num,remain,rev;
+    cin>>a;
+    while(a>0)
+    {
+        cin>>num;
+        while(num!=0)
+        {
+        remain=num%10;
+        rev=remain + (rev*10);
+        num/=10;
+    }
+    cout<<rev<<endl;
+        rev=0;
+        a--;
+    }
+}
