@@ -1,0 +1,41 @@
+/* package codechef; // don't place package name! 
+SmartPhone problem 
+contest code LRNDSA01
+problem code ZCO14003
+You are developing a smartphone app. You have a list of potential customers for your app. Each customer has a budget and will buy the app at your declared price if and only if the price is less than or equal to the customer's budget.
+
+
+You want to fix a price so that the revenue you earn from the app is maximized. Find this maximum possible revenue.
+
+
+For instance, suppose you have 4 potential customers and their budgets are 30, 20, 53 and 14. In this case, the maximum revenue you can get is 60 .
+*/
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	    Scanner sc = new Scanner(System.in);
+         long n = sc.nextLong();
+          long[] arr = new  long[(int)n];
+         for(long i=0 ; i < n ; i++)
+         {
+             arr[(int)i]=sc.nextLong();
+         }
+         Arrays.sort(arr);
+          long len = (n-1); 
+         long  revmax =arr[0]*n ;
+         for( long  i =1 ; i < n ; i++)
+         {
+             long  rev = arr[(int)i]*len ; 
+             len--;
+             if(rev>revmax)revmax=rev;
+         }
+         System.out.println(revmax);
+	}
+}
